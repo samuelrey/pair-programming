@@ -8,7 +8,7 @@ it up and running!
 ## Installation instructions
 
 - Clone the repo
-    - `git clone git@github.com:tkamenick/pair-programming.git`
+    - `git clone git@github.com:northstarfinance/pair-programming.git`
     - `cd pair-programming`
   
 - Install Ruby 2.6.6
