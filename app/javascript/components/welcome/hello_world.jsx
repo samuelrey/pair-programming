@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import moment from "moment";
 import React, { useState } from "react";
 import data from "./data";
+import Bill from "./bill";
 
 const today = moment("09/02", "MM/DD");
 
@@ -19,27 +20,13 @@ const HelloWorld = () => {
             <h2>Bills this paycheck</h2>
             <section className="past-bill-container">
                 {pastBills.map((bill) => {
-                    const { date, title, amount } = bill;
-                    return (
-                        <section className="bill-container">
-                            <div>{date}</div>
-                            <div>{title}</div>
-                            <div>${amount.toFixed(2)}</div>
-                        </section>
-                    );
+                    return <Bill {...bill} />;
                 })}
             </section>
             <hr />
             <section className="upcoming-bill-container">
                 {upcomingBills.map((bill) => {
-                    const { date, title, amount } = bill;
-                    return (
-                        <section className="bill-container">
-                            <div>{date}</div>
-                            <div>{title}</div>
-                            <div>${amount.toFixed(2)}</div>
-                        </section>
-                    );
+                    return <Bill {...bill} />;
                 })}
             </section>
         </div>
