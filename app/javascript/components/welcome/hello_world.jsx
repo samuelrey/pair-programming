@@ -17,16 +17,31 @@ const HelloWorld = () => {
     return (
         <div>
             <h2>Bills this paycheck</h2>
-            {bills.map((bill) => {
-                const { date, title, amount } = bill;
-                return (
-                    <section className="bill-container">
-                        <div>{date}</div>
-                        <div>{title}</div>
-                        <div>{amount}</div>
-                    </section>
-                );
-            })}
+            <section className="past-bill-container">
+                {pastBills.map((bill) => {
+                    const { date, title, amount } = bill;
+                    return (
+                        <section className="bill-container">
+                            <div>{date}</div>
+                            <div>{title}</div>
+                            <div>{amount}</div>
+                        </section>
+                    );
+                })}
+            </section>
+            <hr />
+            <section className="upcoming-bill-container">
+                {upcomingBills.map((bill) => {
+                    const { date, title, amount } = bill;
+                    return (
+                        <section className="bill-container">
+                            <div>{date}</div>
+                            <div>{title}</div>
+                            <div>{amount}</div>
+                        </section>
+                    );
+                })}
+            </section>
         </div>
     );
 };
