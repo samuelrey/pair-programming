@@ -8,6 +8,16 @@ const HelloWorld = (props) => {
     return (
         <div>
             <h2>Bills this paycheck</h2>
+            {bills.map((bill) => {
+                const { date, title, amount } = bill;
+                return (
+                    <section className="bill-container">
+                        <div>{date}</div>
+                        <div>{title}</div>
+                        <div>{amount}</div>
+                    </section>
+                );
+            })}
         </div>
     );
 };
