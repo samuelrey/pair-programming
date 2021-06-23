@@ -1,9 +1,18 @@
 import PropTypes from "prop-types";
+import moment from "moment";
 import React, { useState } from "react";
 import data from "./data";
 
-const HelloWorld = (props) => {
+const today = moment("09/02", "MM/DD");
+
+const HelloWorld = () => {
     const [bills, setBills] = useState(data);
+    const pastBills = bills.filter((bill) =>
+        moment(bill.date, "MM/DD").isBefore(today)
+    );
+    const upcomingBills = bills.filter(
+        (bill) => !moment(bill.date, "MM/DD").isBefore(today)
+    );
 
     return (
         <div>
