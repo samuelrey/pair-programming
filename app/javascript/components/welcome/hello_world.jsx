@@ -24,7 +24,7 @@ const HelloWorld = () => {
                         <section className="bill-container">
                             <div>{date}</div>
                             <div>{title}</div>
-                            <div>{amount}</div>
+                            <div>${amount.toFixed(2)}</div>
                         </section>
                     );
                 })}
@@ -37,7 +37,7 @@ const HelloWorld = () => {
                         <section className="bill-container">
                             <div>{date}</div>
                             <div>{title}</div>
-                            <div>{amount}</div>
+                            <div>${amount.toFixed(2)}</div>
                         </section>
                     );
                 })}

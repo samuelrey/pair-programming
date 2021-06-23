@@ -19,6 +19,10 @@
     width: 100%;
 }
 
+.past-bill-container {
+    opacity: 50%;
+}
+
 .amount {
     justify-content: flex-end;
 }
