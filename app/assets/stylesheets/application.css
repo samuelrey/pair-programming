@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+body {
+    font-family: sans-serif;
+}
 
 .bill-container {
     display: flex;
@@ -23,6 +26,15 @@
     opacity: 50%;
 }
 
+.date {
+    margin-right: 83px;
+}
+
+.title {
+    text-transform: capitalize;
+}
+
 .amount {
-    justify-content: flex-end;
+    flex-grow: 1;
+    text-align: right;
 }
